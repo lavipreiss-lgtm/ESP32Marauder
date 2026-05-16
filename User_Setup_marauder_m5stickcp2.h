@@ -235,12 +235,12 @@
 
 // For the M5Stack module use these #define lines
 //#define TFT_MISO 19
-#define TFT_MOSI 15
-#define TFT_SCLK 13
-#define TFT_CS    5  // Chip select control pin
-#define TFT_DC   14  // Data Command control pin
-#define TFT_RST  12  // Reset pin (could connect to Arduino RESET pin)
-#define TFT_BL   27  // LED back-light (required for M5Stack)
+#define TFT_MOSI 11
+#define TFT_SCLK 18
+#define TFT_CS    17  // Chip select control pin
+#define TFT_DC   16  // Data Command control pin
+#define TFT_RST  5  // Reset pin (could connect to Arduino RESET pin)
+#define TFT_BL   -1  // LED back-light (required for M5Stack)
 
 // ######       EDIT THE PINs BELOW TO SUIT YOUR ESP32 PARALLEL TFT SETUP        ######
 

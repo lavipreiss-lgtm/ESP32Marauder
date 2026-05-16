@@ -167,12 +167,12 @@
 // The hardware SPI can be mapped to any pins
 
 // M5 Cardputer ADV
-#define TFT_BL   38
-#define TFT_RST  33  // Reset pin (could connect to NodeMCU RST, see next line)
-#define TFT_DC   34  // Data Command control pin
-#define TFT_MOSI 35
-#define TFT_SCLK 36
-#define TFT_CS   37  // Chip select control pin D8
+#define TFT_BL   -1
+#define TFT_RST  5  // Reset pin (could connect to NodeMCU RST, see next line)
+#define TFT_DC   16  // Data Command control pin
+#define TFT_MOSI 11
+#define TFT_SCLK 18
+#define TFT_CS   17  // Chip select control pin D8
 #define TOUCH_CS -1
 // #define TFT_MISO -1
 

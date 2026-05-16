@@ -167,14 +167,14 @@
 // Marauder Mini
 // Drone Detector v1
 
-#define TFT_CS   23  // Chip select control pin D8
-#define TFT_DC   24  // Data Command control pin
-#define TFT_RST  -1  // Reset pin (could connect to NodeMCU RST, see next line)
+#define TFT_CS   17  // Chip select control pin D8
+#define TFT_DC   16  // Data Command control pin
+#define TFT_RST  5  // Reset pin (could connect to NodeMCU RST, see next line)
 #define TOUCH_CS -1
 //#define TFT_MISO 16
-#define TFT_MOSI 7
-#define TFT_SCLK 6
-#define TFT_BL   27
+#define TFT_MOSI 11
+#define TFT_SCLK 18
+#define TFT_BL   -1
 
 
 // Drone Detector v2
