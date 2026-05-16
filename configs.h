@@ -403,21 +403,78 @@
   #endif
 
   #ifdef MARAUDER_MULTIBOARD_S3
-    #define HAS_FLIPPER_LED
-    //#define FLIPPER_ZERO_HAT
-    //#define HAS_BATTERY
-    #define HAS_BT
-    //#define HAS_BUTTONS
-    //#define HAS_NEOPIXEL_LED
-    //#define HAS_PWR_MGMT
-    //#define HAS_SCREEN
-    #define HAS_GPS
-    #define HAS_SD
-    #define USE_SD
-    //#define HAS_PSRAM
-    //#define HAS_TEMP_SENSOR
-  #endif
+    #define HARDWARE_NAME "Flipper Zero Multi Board S3 (CUSTOM)"
 
+    #define HAS_BT
+   #define HAS_SCREEN
+   #define HAS_FULL_SCREEN
+   #define HAS_BUTTONS
+
+    // בלי SD/GPS בינתיים כדי לא להפריע
+    //#define HAS_SD
+    //#define USE_SD
+    //#define HAS_GPS
+
+   // ================= DISPLAY =================
+
+   #define CHAN_PER_PAGE 7
+    #define SCREEN_CHAR_WIDTH 40
+   #define HAS_ILI9341
+
+   // הפינים שעבדו לך בבדיקה
+   #define TFT_MISO 19
+   #define TFT_MOSI 11
+    #define TFT_SCLK 18
+    #define TFT_CS   17
+    #define TFT_DC   16
+   #define TFT_RST  5
+   #define TFT_BL   -1
+   #define TOUCH_CS -1
+   #define SD_CS    -1
+
+   #define BANNER_TEXT_SIZE 2
+
+   #ifndef TFT_WIDTH
+    #define TFT_WIDTH 240
+  
+    #endif
+
+    #ifndef TFT_HEIGHT
+     #define TFT_HEIGHT 320
+    #endif
+
+    #define GRAPH_VERT_LIM TFT_HEIGHT/2 - 1
+    #define EXT_BUTTON_WIDTH 0
+
+    #define SCREEN_BUFFER
+    #define MAX_SCREEN_BUFFER 21
+
+    #define SCREEN_ORIENTATION 1
+
+    #define CHAR_WIDTH 12
+    #define SCREEN_WIDTH TFT_WIDTH
+    #define SCREEN_HEIGHT TFT_HEIGHT
+    #define HEIGHT_1 TFT_WIDTH
+    #define WIDTH_1 TFT_HEIGHT
+
+    #define STANDARD_FONT_CHAR_LIMIT (TFT_WIDTH/6)
+    #define TEXT_HEIGHT 16
+    #define BOT_FIXED_AREA 0
+    #define TOP_FIXED_AREA 48
+    #define YMAX 320
+
+    #define minimum(a,b) (((a) < (b)) ? (a) : (b))
+
+    #define MENU_FONT &FreeMono9pt7b
+
+    #define BUTTON_SCREEN_LIMIT 12
+    #define BUTTON_ARRAY_LEN BUTTON_SCREEN_LIMIT
+
+    #define STATUS_BAR_WIDTH 16
+    #define LVGL_TICK_PERIOD 6
+
+   #define STATUSBAR_COLOR 0x4A49
+ #endif
   #ifdef ESP32_LDDB
     //#define FLIPPER_ZERO_HAT
     //#define HAS_BATTERY
