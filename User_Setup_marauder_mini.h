@@ -20,7 +20,8 @@
 
 // Only define one driver, the other ones must be commented out
 //#define ILI9341_DRIVER // OG Marauder
-#define ILI9341_DRIVER //#define ILI9163_DRIVER     // Define additional parameters below for this display
+#define ST7735_DRIVER    // Marauder Mini  // Define additional parameters below for this display
+//#define ILI9163_DRIVER     // Define additional parameters below for this display
 //#define S6D02A1_DRIVER
 //#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
 //#define HX8357D_DRIVER
@@ -43,7 +44,7 @@
 // Try ONE option at a time to find the correct colour order for your display
 
 //  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
-    // Colour order Blue-Green-Red
+  #define TFT_RGB_ORDER TFT_BGR  // Colour order Blue-Green-Red
 
 // For M5Stack ESP32 module with integrated ILI9341 display ONLY, remove // in line below
 
@@ -51,8 +52,10 @@
 
 // For ST7789, ST7735 and ILI9163 ONLY, define the pixel width and height in portrait orientation
 // #define TFT_WIDTH  80
- #define TFT_WIDTH  240
-#define TFT_HEIGHT 320 
+ #define TFT_WIDTH  128 // Marauder Mini
+// #define TFT_WIDTH  240 // ST7789 240 x 240 and 240 x 320
+// #define TFT_HEIGHT 160
+ #define TFT_HEIGHT 128 // Marauder Mini
 // #define TFT_HEIGHT 240 // ST7789 240 x 240
 // #define TFT_HEIGHT 320 // ST7789 240 x 320
 
@@ -66,6 +69,7 @@
 // #define ST7735_INITB
 // #define ST7735_GREENTAB
 // #define ST7735_GREENTAB2
+ #define ST7735_GREENTAB3
 // #define ST7735_GREENTAB128    // For 128 x 128 display
 // #define ST7735_GREENTAB160x80 // For 160 x 80 display (BGR, inverted, 26 offset)
 // #define ST7735_REDTAB
@@ -166,7 +170,7 @@
 #define TFT_RST  5  // Reset pin (could connect to NodeMCU RST, see next line)
 #define TOUCH_CS -1
 #define TFT_MISO 19
-#define TFT_MOSI 11
+#define TFT_MOSI 23
 #define TFT_SCLK 18
 //#define TFT_BL   32
 

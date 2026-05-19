@@ -209,9 +209,9 @@
 #define PIN_D9   3  //              RXD0
 #define PIN_D10  1  //              TXD0
 
-#define PIN_MOSI 11  // SD1          FLASH and overlap mode
-#define PIN_MISO 19  // SD0
-#define PIN_SCLK 12  // CLK
+#define PIN_MOSI 8  // SD1          FLASH and overlap mode
+#define PIN_MISO 7  // SD0
+#define PIN_SCLK 6  // CLK
 #define PIN_HWCS 0  // D3
 
 #define PIN_D11  9  // SD2
