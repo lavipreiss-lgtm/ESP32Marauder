@@ -1,3 +1,4 @@
+#error THIS_FILE_IS_USED
 #pragma once
 
 #ifndef configs_h
