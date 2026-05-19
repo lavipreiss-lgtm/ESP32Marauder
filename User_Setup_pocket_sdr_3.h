@@ -20,7 +20,7 @@
 
 // Only define one driver, the other ones must be commented out
 //#define ILI9341_DRIVER // OG Marauder
-#define ST7735_DRIVER    // Marauder Mini  // Define additional parameters below for this display
+#define ILI9341_DRIVER    // Marauder Mini  // Define additional parameters below for this display
 //#define ILI9163_DRIVER     // Define additional parameters below for this display
 //#define S6D02A1_DRIVER
 //#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
@@ -44,17 +44,17 @@
 // Try ONE option at a time to find the correct colour order for your display
 
 //  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue
-  #define TFT_RGB_ORDER TFT_BGR  // Colour order Blue-Green-Red
+ // Colour order Blue-Green-Red
 
 // For M5Stack ESP32 module with integrated ILI9341 display ONLY, remove // in line below
 
 // #define M5STACK
 
 // For ST7789, ST7735 and ILI9163 ONLY, define the pixel width and height in portrait orientation
- #define TFT_WIDTH  80
+ #define TFT_WIDTH  240
 // #define TFT_WIDTH  128 // Marauder Mini
 // #define TFT_WIDTH  240 // ST7789 240 x 240 and 240 x 320
- #define TFT_HEIGHT 160
+ #define TFT_HEIGHT 320
 // #define TFT_HEIGHT 128 // Marauder Mini
 // #define TFT_HEIGHT 240 // ST7789 240 x 240
 // #define TFT_HEIGHT 320 // ST7789 240 x 320
@@ -73,15 +73,13 @@
 // #define ST7735_GREENTAB128    // For 128 x 128 display
 // #define ST7735_GREENTAB160x80 // For 160 x 80 display (BGR, inverted, 26 offset)
 // #define ST7735_REDTAB
-// #define ST7735_BLACKTAB
- #define ST7735_REDTAB160x80   // For 160 x 80 display with 24 pixel offset
+// #define ST7735_BLACKTAB   // For 160 x 80 display with 24 pixel offset
 
 // If colours are inverted (white shows as black) then uncomment one of the next
 // 2 lines try both options, one of the options should correct the inversion.
 
 // #define TFT_INVERSION_ON
- #define TFT_INVERSION_OFF
-
+ 
 // If a backlight control signal is available then define the TFT_BL pin in Section 2
 // below. The backlight will be turned ON when tft.begin() is called, but the library
 // needs to know if the LEDs are ON with the pin HIGH or LOW. If the LEDs are to be
@@ -167,15 +165,13 @@
 // Marauder Mini
 // Drone Detector v1
 
-#define TFT_CS   17  // Chip select control pin D8
-#define TFT_DC   16  // Data Command control pin
-#define TFT_RST  5  // Reset pin (could connect to NodeMCU RST, see next line)
-#define TOUCH_CS -1
-//#define TFT_MISO 16
+#define TFT_CS   17
+#define TFT_DC   16
+#define TFT_RST  5
 #define TFT_MOSI 11
 #define TFT_SCLK 18
+#define TFT_MISO 19
 #define TFT_BL   -1
-
 
 // Drone Detector v2
 /*
